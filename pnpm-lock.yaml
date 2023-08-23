@@ -1,16 +1,22 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@types/leaflet': ^1.9.3
   '@types/node': 20.4.0
   '@types/react': 18.2.14
   '@types/react-dom': 18.2.6
+  '@types/react-leaflet': ^3.0.0
   autoprefixer: 10.4.14
   eslint: 8.44.0
   eslint-config-next: 13.4.9
+  leaflet: ^1.9.4
+  leaflet-defaulticon-compatibility: ^0.1.2
   next: 13.4.8
   postcss: 8.4.25
   react: 18.2.0
   react-dom: 18.2.0
+  react-leaflet: ^4.2.1
+  swiper: ^10.1.0
   tailwindcss: 3.3.2
   typescript: 5.1.6
 
@@ -21,12 +27,20 @@ dependencies:
   autoprefixer: 10.4.14_postcss@8.4.25
   eslint: 8.44.0
   eslint-config-next: 13.4.9_iqf7tbmerllfqanu4l3d6aqdn4
+  leaflet: 1.9.4
+  leaflet-defaulticon-compatibility: 0.1.2
   next: 13.4.8_biqbaboplfbrettd7655fr4n2y
   postcss: 8.4.25
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-leaflet: 4.2.1_p7e52lah55xmyywv7f3e7owrmy
+  swiper: 10.1.0
   tailwindcss: 3.3.2
   typescript: 5.1.6
+
+devDependencies:
+  '@types/leaflet': 1.9.3
+  '@types/react-leaflet': 3.0.0_p7e52lah55xmyywv7f3e7owrmy
 
 packages:
 
@@ -262,6 +276,17 @@ packages:
       tslib: 2.6.0
     dev: false
 
+  /@react-leaflet/core/2.1.0_p7e52lah55xmyywv7f3e7owrmy:
+    resolution: {integrity: sha512-Qk7Pfu8BSarKGqILj4x7bCSZ1pjuAPZ+qmRwH5S7mDS91VSbVVsJSrW4qA+GPrro8t69gFYVMWb1Zc4yFmPiVg==}
+    peerDependencies:
+      leaflet: ^1.9.0
+      react: ^18.0.0
+      react-dom: ^18.0.0
+    dependencies:
+      leaflet: 1.9.4
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+
   /@rushstack/eslint-patch/1.3.2:
     resolution: {integrity: sha512-V+MvGwaHH03hYhY+k6Ef/xKd6RYlc4q8WBx+2ANmipHJcKuktNcI/NgEsJgdSUF6Lw32njT6OnrRsKYCdgHjYw==}
     dev: false
@@ -272,9 +297,19 @@ packages:
       tslib: 2.6.0
     dev: false
 
+  /@types/geojson/7946.0.10:
+    resolution: {integrity: sha512-Nmh0K3iWQJzniTuPRcJn5hxXkfB1T1pgB89SBig5PlJQU5yocazeu4jATJlaA0GYFKWMqDdvYemoSnF2pXgLVA==}
+    dev: true
+
   /@types/json5/0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: false
+
+  /@types/leaflet/1.9.3:
+    resolution: {integrity: sha512-Caa1lYOgKVqDkDZVWkto2Z5JtVo09spEaUt2S69LiugbBpoqQu92HYFMGUbYezZbnBkyOxMNPXHSgRrRY5UyIA==}
+    dependencies:
+      '@types/geojson': 7946.0.10
+    dev: true
 
   /@types/node/20.4.0:
     resolution: {integrity: sha512-jfT7iTf/4kOQ9S7CHV9BIyRaQqHu67mOjsIQBC3BKZvzvUB6zLxEwJ6sBE3ozcvP8kF6Uk5PXN0Q+c0dfhGX0g==}
@@ -289,6 +324,17 @@ packages:
     dependencies:
       '@types/react': 18.2.14
     dev: false
+
+  /@types/react-leaflet/3.0.0_p7e52lah55xmyywv7f3e7owrmy:
+    resolution: {integrity: sha512-p8R9mVKbCDDqOdW+M6GyJJuFn6q+IgDFYavFiOIvaWHuOe5kIHZEtCy1pfM43JIA6JiB3D/aDoby7C51eO+XSg==}
+    deprecated: This is a stub types definition. react-leaflet provides its own type definitions, so you do not need this installed.
+    dependencies:
+      react-leaflet: 4.2.1_p7e52lah55xmyywv7f3e7owrmy
+    transitivePeerDependencies:
+      - leaflet
+      - react
+      - react-dom
+    dev: true
 
   /@types/react/18.2.14:
     resolution: {integrity: sha512-A0zjq+QN/O0Kpe30hA1GidzyFjatVvrpIvWLxD+xv67Vt91TWWgco9IvrJBkeyHm1trGaFS/FSGqPlhyeZRm0g==}
@@ -1645,7 +1691,6 @@ packages:
 
   /js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
-    dev: false
 
   /js-yaml/4.1.0:
     resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
@@ -1689,6 +1734,13 @@ packages:
       language-subtag-registry: 0.3.22
     dev: false
 
+  /leaflet-defaulticon-compatibility/0.1.2:
+    resolution: {integrity: sha512-IrKagWxkTwzxUkFIumy/Zmo3ksjuAu3zEadtOuJcKzuXaD76Gwvg2Z1mLyx7y52ykOzM8rAH5ChBs4DnfdGa6Q==}
+    dev: false
+
+  /leaflet/1.9.4:
+    resolution: {integrity: sha512-nxS1ynzJOmOlHp+iL3FyWqK89GtNL8U8rvlMOsQdTTssxZwCXh8N2NB3GDQOL+YR3XnWyZAxwQixURb+FA74PA==}
+
   /levn/0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
@@ -1722,7 +1774,6 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
-    dev: false
 
   /lru-cache/6.0.0:
     resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
@@ -2148,18 +2199,28 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
-    dev: false
 
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: false
+
+  /react-leaflet/4.2.1_p7e52lah55xmyywv7f3e7owrmy:
+    resolution: {integrity: sha512-p9chkvhcKrWn/H/1FFeVSqLdReGwn2qmiobOQGO3BifX+/vV/39qhY8dGqbdcPh1e6jxh/QHriLXr7a4eLFK4Q==}
+    peerDependencies:
+      leaflet: ^1.9.0
+      react: ^18.0.0
+      react-dom: ^18.0.0
+    dependencies:
+      '@react-leaflet/core': 2.1.0_p7e52lah55xmyywv7f3e7owrmy
+      leaflet: 1.9.4
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
 
   /react/18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
-    dev: false
 
   /read-cache/1.0.0:
     resolution: {integrity: sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA==}
@@ -2251,7 +2312,6 @@ packages:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
       loose-envify: 1.4.0
-    dev: false
 
   /semver/6.3.0:
     resolution: {integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==}
@@ -2416,6 +2476,11 @@ packages:
   /supports-preserve-symlinks-flag/1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+    dev: false
+
+  /swiper/10.1.0:
+    resolution: {integrity: sha512-E+wh+hcSbwlRfXuwBTclcOOikOjNdSF0a2Sdg3J4cIWtHO64A7SaLRfezfrJ67CW3GEc15AduYU2YKlElsjqsQ==}
+    engines: {node: '>= 4.7.0'}
     dev: false
 
   /synckit/0.8.5:
