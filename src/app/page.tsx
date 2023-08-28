@@ -3,10 +3,9 @@ import Image from "next/image"
 import respaldo from "../assets/BoxMan.jpeg"
 import boxRing from "../assets/boxRing.jpg"
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import "leaflet/dist/leaflet.css"
 import 'swiper/css';
 import 'swiper/css/pagination';
-import "leaflet/dist/leaflet.css"
 import 'leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css';
 import { Pagination } from 'swiper/modules';
 //Hits
@@ -17,6 +16,7 @@ import GanchoImage from "../assets/gancho.jpg"
 
 import { dataPunch } from "@/components/dataNav"
 import Map from "@/components/Map";
+import GetImages from "@/functions/GetImages";
 
 
 export default function Home() {
@@ -38,7 +38,7 @@ export default function Home() {
       <div className=" clip-path-header bg-[#090909] h-[45rem] sm:h-[30rem] md:h-[30rem]  xl:h-[40rem] px-5  ">
 
         <div className="flex flex-col md:flex-row pt-20 justify-center">
-          <h1 className=" md:w-[30rem] text-center md:text-start lg:w-[45rem] text-[70px] lg:text-[90px] xl:text-[110px] 2xl:text-[130px] pt-10 px-5 md:px-15 text-white font-title font-weight-bold uppercase">Fight like a <span className=" text-red-600">champion</span></h1>
+          <h1 className=" md:w-[30rem] text-center md:text-start lg:w-[45rem] text-[70px] lg:text-[90px] xl:text-[110px] 2xl:text-[130px] pt-10 px-5 md:px-15 text-white font-title font-weight-bold uppercase">Pelea como un <span className=" text-red-600">Campeon</span></h1>
           <Image className=" w-[25rem] m-auto md:m-1 md:w-[30rem] xl:w-[40rem] 2xl:w-[45rem] rounded-lg border border-transparent shadow-sm " src={respaldo} alt="imagen de boxeador"></Image>
         </div>
       </div>
@@ -124,7 +124,7 @@ export default function Home() {
         </Swiper>
 
       </section>
-      <section className=" px-5 py-5 items-center justify-center min-h-[15rem] bg-black grid grid-cols-1 text-white md:grid-cols-2">
+      <section id="Horarios" className=" px-5 py-5 items-center justify-center min-h-[15rem] bg-black grid grid-cols-1 text-white md:grid-cols-2">
         <Map></Map>
         <div className="justify-center align-middle text-center pt-10 md:pt-0">
           <h1 className="text-5xl font-bold uppercase  text-red-600 ">Horario</h1>
@@ -133,8 +133,9 @@ export default function Home() {
           <p className="text-2xl">Lunes Martes Miercoles Viernes</p>
         </div>
       </section>
-      <section>
-
+      <section className="pt-10 font-title font-bold px-5 pb-10 ">
+        <h1 className="text-6xl text-center pb-10 font-bold">Galeria de Imagenes</h1>
+        <GetImages></GetImages>
       </section>
     </>
   )

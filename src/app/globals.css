@@ -54,4 +54,26 @@
 {
     width: 100%;
     height: 20rem;
+    z-index: 10;
+}
+.BoxImageGallery
+{
+    max-height: 500px;
+}
+.grid-columns-special
+{
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: dense;
+    /* grid-auto-rows: 500px; */
+    align-items: end;
+    grid-template-columns: repeat(auto-fill,minmax(min(100%,400px),1fr));
+}
+img
+{
+    border-radius: 1px;
+}
+.duration-special
+{
+    animation-duration: 150ms;
 }

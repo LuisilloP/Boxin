@@ -1,11 +1,18 @@
 
 import React from 'react'
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
+import icon from "../../../public/marker-icon-2x.png";
+import L from "leaflet";
+import iconShadow from "../../../public/marker-shadow.png";
 
-type Props = {}
 
-const Map = (props: Props) => {
-  const position = [-30.6047078, -71.2018341]
+L.icon({
+  iconUrl: icon,
+  shadowUrl: iconShadow,
+});
+
+const Map = () => {
+  const position = [-30.6046874, -71.2020006, 21]
   return (
     //@ts-ignore 
     <MapContainer className={"mapTest"} center={position} zoom={50} scrollWheelZoom={false} >
