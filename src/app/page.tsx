@@ -56,7 +56,7 @@ export default function Home() {
         <h1 className="text-6xl text-center pb-10">Aprende Golpes Basicos</h1>
         <div className="grid md:grid-cols-2 gap-5 grid-cols-1">
           <div className="flex flex-col md:flex-row gap-5 ">
-            <Image className=" h- md:w-[50%] max-h-[20rem] " src={UpperImage} alt="box-image"></Image>
+            <Image className=" h- md:w-[50%] h-[20rem] " src={UpperImage} alt="box-image"></Image>
             <div className="md:w-[50%]">
               <p className="text-[40px]">UpperCut</p>
               <div className="flex flex-col  md:flex-row gap-5">
@@ -66,7 +66,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col md:flex-row gap-5 ">
-            <Image className=" h- md:w-[50%] max-h-[20rem] " src={JabImage} alt="box-image"></Image>
+            <Image className=" h- md:w-[50%] h-[20rem] " src={JabImage} alt="box-image"></Image>
             <div className="md:w-[50%]">
               <p className="text-[40px]">Jab</p>
               <div className="flex flex-col  md:flex-row gap-5">
@@ -76,7 +76,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col md:flex-row gap-5 ">
-            <Image className=" h- md:w-[50%] max-h-[20rem] " src={CrossImage} alt="box-image"></Image>
+            <Image className=" h- md:w-[50%] h-[20rem] " src={CrossImage} alt="box-image"></Image>
             <div className="md:w-[50%]">
               <p className="text-[40px]">Cross</p>
               <div className="flex flex-col  md:flex-row gap-5">
@@ -86,7 +86,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col md:flex-row gap-5 ">
-            <Image className=" h- md:w-[50%] max-h-[20rem] " src={GanchoImage} alt="box-image"></Image>
+            <Image className=" h- md:w-[50%] h-[20rem] " src={GanchoImage} alt="box-image"></Image>
             <div className="md:w-[50%]">
               <p className="text-[40px]">Hook</p>
               <div className="flex flex-col  md:flex-row gap-5">
@@ -109,7 +109,7 @@ export default function Home() {
             <SwiperSlide key={data[0]}>
               <div >
 
-                <Image width={400} height={400} alt="punch" src={data[2]}></Image>
+                <Image className=" rounded-sm" width={500} height={500} alt="punch" src={data[2]}></Image>
                 <h1 className=" text-5xl">{data[0]}</h1>
                 {data[1].split(" * ").map((number, i) =>
                 (
@@ -124,18 +124,24 @@ export default function Home() {
         </Swiper>
 
       </section>
-      <section id="Horarios" className=" px-5 py-5 items-center justify-center min-h-[15rem] bg-black grid grid-cols-1 text-white md:grid-cols-2">
-        <Map></Map>
-        <div className="justify-center align-middle text-center pt-10 md:pt-0">
-          <h1 className="text-5xl font-bold uppercase  text-red-600 ">Horario</h1>
-          <p className="text-2xl">Desde 18:00pm - Hasta 20:00pm</p>
-          <h1 className="text-5xl font-bold uppercase pt-5 text-blue-600 ">Dias</h1>
-          <p className="text-2xl">Lunes Martes Miercoles Viernes</p>
+      <section id="Horarios" className=" px-5 py-5  min-h-[15rem] bg-black  text-white ">
+        <h1 className="text-6xl text-center pb-5 font-bold">Horarios y Dias</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center">
+          <Map></Map>
+          <div className="justify-center align-middle text-center pt-10 md:pt-0">
+            <h1 className="text-5xl font-bold uppercase  text-red-600 ">Horario</h1>
+            <p className="text-2xl">Desde 18:00pm - Hasta 20:00pm</p>
+            <h1 className="text-5xl font-bold uppercase pt-5 text-blue-600 ">Dias</h1>
+            <p className="text-2xl">Lunes Martes Miercoles Viernes</p>
+          </div>
         </div>
       </section>
       <section className="pt-10 font-title font-bold px-5 pb-10 ">
         <h1 className="text-6xl text-center pb-10 font-bold">Galeria de Imagenes</h1>
         <GetImages></GetImages>
+      </section>
+      <section className="pt-10 font-title font-bold px-5 pb-10">
+        <h1 className="text-6xl text-center pb-10 font-bold">Siguenos en nuestras redes sociales</h1>
       </section>
     </>
   )

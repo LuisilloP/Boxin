@@ -34,7 +34,7 @@ const GetImages = (props: Props) => {
             <div className="grid-columns-special px-2 md:px-5 ">
                 {imageUrls.map((url, index) => (
 
-                    <Image key={index} width={500} height={0} className="BoxImageGallery" src={url} alt={"BoxImage" + index} ></Image>
+                    <Image key={index} width={500} height={0} className="BoxImageGallery zoom-effect rounded-sm" src={url} alt={"BoxImage" + index} ></Image>
 
                 ))}
             </div>

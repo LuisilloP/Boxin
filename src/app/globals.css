@@ -77,3 +77,13 @@ img
 {
     animation-duration: 150ms;
 }
+.zoom-effect {
+    display: inline-block;
+    overflow: hidden;
+    transition: transform 0.3s; /* Agrega una transición suave */
+    cursor: pointer;
+  }
+  
+  .zoom-effect:hover {
+    transform: scale(1.05); /* Escala la imagen al 120% en el hover */
+  }

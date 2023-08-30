@@ -38,7 +38,7 @@ const Header = () => {
                         dataNav.map(value => (
                             <li className='border-b  lg:border-none' key={value}>
                                 <a className=' duration-special ease-out hover:ease-in px-12 lg:px-0 transition cursor-pointer hover:text-cyan-600 ' onClick={() => {
-                                    document.querySelector(`#${value}`)?.scrollIntoView({ behavior: 'smooth' })
+                                    document.querySelector(`#${value}`)?.scrollIntoView({ behavior: 'smooth', block: "start" })
                                     console.log(value)
                                     // const hamburger = document.querySelector('#hamburger') as HTMLInputElement
                                     // hamburger.checked = false
