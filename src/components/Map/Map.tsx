@@ -5,10 +5,11 @@ import icon from "../../../public/marker-icon-2x.png";
 import L from "leaflet";
 import iconShadow from "../../../public/marker-shadow.png";
 
-
+const iconS = icon.toString()
+const iconShadows = iconShadow.toString()
 L.icon({
-  iconUrl: icon.toString(),
-  shadowUrl: iconShadow.toString(),
+  iconUrl: iconS,
+  shadowUrl: iconShadows,
 });
 
 const Map = () => {
