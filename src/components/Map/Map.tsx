@@ -7,8 +7,8 @@ import iconShadow from "../../../public/marker-shadow.png";
 
 
 L.icon({
-  iconUrl: icon,
-  shadowUrl: iconShadow,
+  iconUrl: icon + "",
+  shadowUrl: iconShadow + "",
 });
 
 const Map = () => {
