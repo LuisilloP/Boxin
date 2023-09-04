@@ -26,7 +26,7 @@ export default function Home() {
     const pagination = {
       clickable: true,
       renderBullet: function (index: number, className: string) {
-        return `<span class="${className}">${arrayNAmes[index]}</span>`;
+        return `<span class="${className}" >${arrayNAmes[index]}</span>`;
       },
     };
     return pagination
@@ -35,14 +35,14 @@ export default function Home() {
   return (
 
     <>
-      <div className=" clip-path-header bg-[#090909] h-[45rem] sm:h-[30rem] md:h-[30rem]  xl:h-[40rem] px-5  ">
+      <div id="Principal" className=" clip-path-header bg-[#090909] h-[45rem] sm:h-[30rem] md:h-[30rem]  xl:h-[40rem] px-5  ">
 
         <div className="flex flex-col md:flex-row pt-20 justify-center">
           <h1 className=" md:w-[30rem] text-center md:text-start lg:w-[45rem] text-[70px] lg:text-[90px] xl:text-[110px] 2xl:text-[130px] pt-10 px-5 md:px-15 text-white font-title font-weight-bold uppercase">Pelea como un <span className=" text-red-600">Campeon</span></h1>
           <Image className=" w-[25rem] m-auto md:m-1 md:w-[30rem] xl:w-[40rem] 2xl:w-[45rem] rounded-lg border border-transparent shadow-sm " src={respaldo} alt="imagen de boxeador"></Image>
         </div>
       </div>
-      <section className="py-10 font-title px-5 flex flex-col md:flex-row gap-5 m-auto justify-center  ">
+      <section id="Historia" className="py-10 font-title px-5 flex flex-col md:flex-row gap-5 m-auto justify-center  ">
         <Image className=" sm:w-[25rem] md:h-[20rem]" src={boxRing} alt="section image"></Image>
         <div className="border-2 border-red-600 md:h-20"></div>
         <div className="md:w-[35rem] lg:w-[30rem]">
@@ -52,7 +52,7 @@ export default function Home() {
             Ut obcaecati accusamus quo autem molestiae est atque dignissimos qui rerum voluptates eum molestiae nulla rem placeat impedit et magnam magnam.</p>
         </div>
       </section>
-      <section className=" pt-10  bg-black text-white font-title font-bold px-5 pb-10 ">
+      <section id="Golpes" className=" pt-10  bg-black text-white font-title font-bold px-5 pb-10 ">
         <h1 className="text-6xl text-center pb-10">Aprende Golpes Basicos</h1>
         <div className="grid md:grid-cols-2 gap-5 grid-cols-1">
           <div className="flex flex-col md:flex-row gap-5 ">
@@ -97,7 +97,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="pt-10 font-title font-bold px-5 pb-10 ">
+      <section id="PunchI" className="pt-10 font-title font-bold px-5 pb-10 ">
         <h1 className="text-6xl text-center pb-10">Instrucciones de golpe</h1>
         <Swiper
           pagination={paginationF(dataPunch)}
@@ -113,7 +113,7 @@ export default function Home() {
                 <h1 className=" text-5xl">{data[0]}</h1>
                 {data[1].split(" * ").map((number, i) =>
                 (
-                  <ul className=" text-gray-700" key={i}>
+                  <ul className=" text-zinc-600" key={i}>
                     <br></br>
                     <li>{number}</li>
                   </ul>
@@ -136,13 +136,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="pt-10 font-title font-bold px-5 pb-10 ">
+      <section id="Galeria" className="pt-10 font-title font-bold px-5 pb-10 ">
         <h1 className="text-6xl text-center pb-10 font-bold">Galeria de Imagenes</h1>
         <GetImages></GetImages>
       </section>
-      <section className="pt-10 font-title font-bold px-5 pb-10">
-        <h1 className="text-6xl text-center pb-10 font-bold">Siguenos en nuestras redes sociales</h1>
-      </section>
+
     </>
   )
 }

@@ -36,12 +36,10 @@ const Header = () => {
                 <ul className={`hidden sm:flex  flex-col sm:flex-row gap-5 ${btn ? "" : ""}`}>
                     {
                         dataNav.map(value => (
-                            <li className='border-b  lg:border-none' key={value}>
-                                <a className=' duration-special ease-out hover:ease-in px-12 lg:px-0 transition cursor-pointer hover:text-cyan-600 ' onClick={() => {
+                            <li className='' key={value}>
+                                <a className=' duration-special ease-out hover:ease-in  lg:px-0 transition cursor-pointer hover:text-red-600 ' onClick={() => {
+
                                     document.querySelector(`#${value}`)?.scrollIntoView({ behavior: 'smooth', block: "start" })
-                                    console.log(value)
-                                    // const hamburger = document.querySelector('#hamburger') as HTMLInputElement
-                                    // hamburger.checked = false
                                 }}>{value} </a>
                             </li>
                         ))
@@ -56,11 +54,9 @@ const Header = () => {
                         {
                             dataNav.map(value => (
                                 <li className=' border-none' key={value}>
-                                    <a className=' duration-special ease-out hover:ease-in px-12 lg:px-0 transition cursor-pointer hover:text-cyan-600 ' onClick={() => {
+                                    <a className=' duration-special ease-out hover:ease-in px-12 lg:px-0 transition cursor-pointer hover:text-red-600 ' onClick={() => {
+                                        setBtn(!btn)
                                         document.querySelector(`#${value}`)?.scrollIntoView({ behavior: 'smooth' })
-                                        console.log(value)
-                                        // const hamburger = document.querySelector('#hamburger') as HTMLInputElement
-                                        // hamburger.checked = false
                                     }}>{value} </a>
                                 </li>
                             ))

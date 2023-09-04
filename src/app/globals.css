@@ -2,7 +2,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+html
+{
+    scroll-padding: 65px;
+}
 .clip-path-header
 {
     clip-path: polygon(50% 0%, 100% 0, 100% 78%, 76% 84%, 25% 95%, 0 100%, 0 0);
@@ -86,4 +89,8 @@ img
   
   .zoom-effect:hover {
     transform: scale(1.05); /* Escala la imagen al 120% en el hover */
+  }
+  .PaddingNav
+  {
+    scroll-margin-top: 40px;
   }
