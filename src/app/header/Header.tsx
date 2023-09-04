@@ -32,7 +32,7 @@ const Header = () => {
         <header className={`  font-open bold font-semibold  ${scroll > 0 ? "text-gray-600" : "text-gray-50"} `}>
             <div className={`fixed z-50 ${scroll > 0 ? "h-[4rem] bg-white shadow-sm" : "h-[5rem] bg-gradient-to-b from-neutral-900 "} ease-in duration-500  w-full 
              flex items-center justify-between px-5 `} >
-                <Link href={"/"} className=' hamburger flex z-50 font-title items-center text-2xl uppercase'> <Image alt='logo' className={` w-20 h-20 ${scroll > 0 ? "invert-0" : "invert"} `} src={LogoF}></Image> <p><span className='text-red-600'>Boxin</span> <span className='text-blue-600'>Club</span></p> </Link>
+                <Link href={"/"} className=' hamburger flex z-50 font-title items-center text-2xl uppercase'> <Image alt='logo' className={` w-20 h-20 ${scroll > 0 ? "invert-0" : "invert"} `} src={LogoF}></Image> <p><span className='text-red-600'>Boxing</span> <span className='text-blue-600'>Club</span></p> </Link>
                 <ul className={`hidden sm:flex  flex-col sm:flex-row gap-5 ${btn ? "" : ""}`}>
                     {
                         dataNav.map(value => (

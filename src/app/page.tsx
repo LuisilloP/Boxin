@@ -46,14 +46,13 @@ export default function Home() {
         <Image className=" sm:w-[25rem] md:h-[20rem]" src={boxRing} alt="section image"></Image>
         <div className="border-2 border-red-600 md:h-20"></div>
         <div className="md:w-[35rem] lg:w-[30rem]">
-          <h2 className=" text-4xl font-bold text-black uppercase  ">how we got started
-            in this business</h2>
+          <h2 className=" text-4xl font-bold text-black uppercase  ">Conoce un poco de nuestra historia</h2>
           <p className="font-bold text-zinc-600 pt-5">Lorem ipsum dolor sit amet. Sed sunt voluptatem non veniam sint ut dolor sint aut eveniet beatae id vitae nemo et modi cupiditate qui corporis voluptate. Ut amet neque ad ipsum consequatur est recusandae itaque et rerum minima aut officiis esse quo aperiam eligendi.
             Ut obcaecati accusamus quo autem molestiae est atque dignissimos qui rerum voluptates eum molestiae nulla rem placeat impedit et magnam magnam.</p>
         </div>
       </section>
       <section id="Golpes" className=" pt-10  bg-black text-white font-title font-bold px-5 pb-10 ">
-        <h1 className="text-6xl text-center pb-10">Aprende Golpes Basicos</h1>
+        <h1 className="text-6xl text-center pb-10">Aprende golpes básicos </h1>
         <div className="grid md:grid-cols-2 gap-5 grid-cols-1">
           <div className="flex flex-col md:flex-row gap-5 ">
             <Image className=" h- md:w-[50%] h-[20rem] " src={UpperImage} alt="box-image"></Image>
@@ -98,7 +97,7 @@ export default function Home() {
         </div>
       </section>
       <section id="PunchI" className="pt-10 font-title font-bold px-5 pb-10 ">
-        <h1 className="text-6xl text-center pb-10">Instrucciones de golpe</h1>
+        <h1 className="text-6xl text-center pb-10">Instrucciones de golpe </h1>
         <Swiper
           pagination={paginationF(dataPunch)}
           modules={[Pagination]}
@@ -110,7 +109,7 @@ export default function Home() {
               <div >
 
                 <Image className=" rounded-sm" width={500} height={500} alt="punch" src={data[2]}></Image>
-                <h1 className=" text-5xl">{data[0]}</h1>
+                <h1 className=" text-5xl pt-4">{data[0]}</h1>
                 {data[1].split(" * ").map((number, i) =>
                 (
                   <ul className=" text-zinc-600" key={i}>
@@ -124,15 +123,15 @@ export default function Home() {
         </Swiper>
 
       </section>
-      <section id="Horarios" className=" px-5 py-5  min-h-[15rem] bg-black  text-white ">
-        <h1 className="text-6xl text-center pb-5 font-bold">Horarios y Dias</h1>
+      <section id="Horarios" className=" font-title  px-5 py-5  min-h-[15rem] bg-black  text-white ">
+        <h1 className="text-6xl text-center pb-5 font-bold">Horarios y días </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center">
           <Map></Map>
           <div className="justify-center align-middle text-center pt-10 md:pt-0">
-            <h1 className="text-5xl font-bold uppercase  text-red-600 ">Horario</h1>
-            <p className="text-2xl">Desde 18:00pm - Hasta 20:00pm</p>
-            <h1 className="text-5xl font-bold uppercase pt-5 text-blue-600 ">Dias</h1>
-            <p className="text-2xl">Lunes Martes Miercoles Viernes</p>
+            <h1 className="text-6xl font-bold uppercase  text-red-600 ">Horario</h1>
+            <p className="text-4xl">Desde 18:00pm - Hasta 20:00pm</p>
+            <h1 className="text-6xl font-bold uppercase pt-5 text-blue-600 ">Días</h1>
+            <p className="text-4xl">Lunes Martes Miercoles Viernes</p>
           </div>
         </div>
       </section>
